@@ -1,0 +1,4 @@
+@mixin textStyle($color,$fontSize){
+    color:$color;
+    font-size: $fontSize;
+}

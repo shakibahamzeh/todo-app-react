@@ -1,0 +1,41 @@
+@import "variables";
+@import "mixin";
+
+
+.todoListContainer{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid $todoColor;
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include textStyle($textColor,24px);
+
+    .checkIcon{
+        cursor: pointer;
+        border: none;
+        span{
+            color: $greenColor;
+            text-align: center;
+            border: none;
+            font-size: 24px;
+        }
+    }
+    .removeIcon{
+        background-color: transparent;
+        position: absolute;
+        right:7%;
+        cursor: pointer;
+        border: none;
+        span{
+            @include textStyle($redColor,24px);
+        }
+    }
+    .text{
+        margin-left: 1rem;
+    }
+    .completed{
+        text-decoration: line-through;
+    }
+}
