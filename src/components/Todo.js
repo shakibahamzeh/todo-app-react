@@ -25,13 +25,17 @@ const Todo = ({value,todos,todo,setTodos}) => {
     };
   return (
     <li className='todoListContainer'>
-       <button onClick={checkedHandler} className="checkIcon">
-           <span className='icon-check'></span>
-       </button>
-       <div className={`text ${todo.completed ? "completed" : ""}`}>{value}</div>
-       <button onClick={removeHandler} className="removeIcon">
-            <span className='icon-trash'></span>
-        </button>
+            <div className='todoTextContainer'>
+                <div onClick={checkedHandler} className="checkIcon">
+                    <div className={todo.completed ? 'checkShowWrapper' : ''}>
+                        <span className={todo.completed ? 'icon-check' : ''}></span>
+                    </div>
+                </div>
+            <p onClick={checkedHandler} className={`text ${todo.completed ? "completed" : ""}`}>{value}</p>
+            </div>
+            <div onClick={removeHandler} className="removeIcon">
+                <span className='icon-trash'></span>
+            </div>
     </li>
   )
 }

@@ -1,0 +1,122 @@
+.todoListContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 43px;
+  padding: 21px 40.32px 21px 30px;
+  border-top: 1px solid #B8B8B8;
+  border-right: 1px solid #B8B8B8;
+  border-left: 1px solid #B8B8B8;
+  color: #797979;
+  font-size: 24px;
+}
+
+.todoListContainer .todoTextContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 43px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.todoListContainer .checkIcon {
+  background-color: #FFFFFF;
+  cursor: pointer;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todoListContainer .checkIcon div {
+  text-align: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #B8B8B8;
+  border-radius: 50%;
+  -webkit-transition: border 0.2s ease-out;
+  transition: border 0.2s ease-out;
+}
+
+.todoListContainer .checkIcon div span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  color: #90D849;
+  opacity: 0;
+}
+
+.todoListContainer .removeIcon {
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border: 0;
+  width: 20.35px;
+  height: 25.04px;
+}
+
+.todoListContainer .removeIcon .icon-trash {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #FF5B5B;
+}
+
+.todoListContainer .text {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.todoListContainer .completed {
+  text-decoration: line-through;
+  color: #B8B8B8;
+}
+
+.icon-check {
+  display: inline-block;
+  font-size: 42px;
+  opacity: 1 !important;
+  border-radius: 50%;
+}
+
+.checkShowWrapper {
+  border: 1px solid #FFFFFF !important;
+}
+
+@media screen and (max-width: 600px) {
+  .todoListContainer {
+    overflow-x: scroll;
+    gap: 21px;
+  }
+  .todoTextContainer {
+    gap: 21px !important;
+  }
+}
+/*# sourceMappingURL=todo.css.map */

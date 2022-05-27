@@ -1,38 +1,61 @@
 @import "variables";
 @import "mixin";
 
-.formContainer{
-    width: 600px;
-    height: 68px;
-    box-shadow: 0 16px 12px rgba(0,0,0,0.25);
+.formContainer {
+  width: 600px;
+  height: 68px;
+  border: 1px solid $inputBgColor;
+  box-shadow: 0 16px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+
+  input {
+    width: 496px;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: $inputBgColor;
+    padding-left: 37px;
+    font-style: italic;
+    font-size: 1.5rem;
+    @include textStyle($textColor, 24px);
+    border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    input{
-        width: 496px;
-        height: 100%;
-        outline: none;
-        border: none;
-        background-color: $inputBgColor;
-        padding-left: 37px;
-        @include textStyle($textColor,24px);
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
+
+    &::placeholder {
+      color: $todoColor;
     }
-    button{
-      width: 104px;
-      height: 100%;
-      text-align: center;
-      outline: none;
-      border: none;
-      background-color: $btnBgColor;
-      @include textStyle($textColor,24px);
-      border-top-right-radius: 15px;
-      border-bottom-right-radius: 15px;
-      cursor: pointer;
-      transition: 0.5s;
-      &:hover{
-        opacity: 0.8;
-      }
+  }
+
+  button {
+    width: 102px;
+    height: 100%;
+    text-align: center;
+    outline: none;
+    border: none;
+    background-color: $btnBgColor;
+    @include textStyle($todoColor, 24px);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    transition: color .1s ease-out;
+
+    &:hover {
+      color: $textColor;
+    }
+  }
+
+}
+
+@media screen and (max-width: 860px) {
+  .formContainer {
+    width: 90vw;
+
+    input {
+      width: 80%;
     }
 
+    button {
+      width: 20%;
+    }
+  }
 }

@@ -2,40 +2,98 @@
 @import "mixin";
 
 
-.todoListContainer{
+.todoListContainer {
     display: flex;
     align-items: center;
-    padding: 1rem;
-    border: 1px solid $todoColor;
-    display: flex;
-    align-items: center;
-    position: relative;
-    @include textStyle($textColor,24px);
+    justify-content: space-between;
+    gap: 43px;
+    padding: 21px 40.32px 21px 30px;
+    border-top: 1px solid $todoColor;
+    border-right: 1px solid $todoColor;
+    border-left: 1px solid $todoColor;
+    @include textStyle($textColor, 24px);
 
-    .checkIcon{
+    .todoTextContainer {
+        display: flex;
+        justify-content: flex-start;
+        gap: 43px;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .checkIcon {
+        background-color: $btnBgColor;
         cursor: pointer;
         border: none;
-        span{
-            color: $greenColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div {
             text-align: center;
-            border: none;
-            font-size: 24px;
+            width: 42px;
+            height: 42px;
+            border: 1px solid $todoColor;
+            border-radius: 50%;
+            transition: border $transition;
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                transition: opacity $transition;
+                color: $greenColor;
+                opacity: 0;
+    
+            }
         }
     }
-    .removeIcon{
-        background-color: transparent;
-        position: absolute;
-        right:7%;
+
+    .removeIcon {
         cursor: pointer;
-        border: none;
-        span{
-            @include textStyle($redColor,24px);
+        background-color: $btnBgColor;
+        border: 0;
+        width: 20.35px;
+        height: 25.04px;
+        .icon-trash {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            color: $redColor;
         }
     }
-    .text{
-        margin-left: 1rem;
+
+    .text {
+        transition: all  $transition;
     }
-    .completed{
+
+    .completed {
         text-decoration: line-through;
+        color: $todoColor;
+    }
+}
+
+.icon-check {
+    display: inline-block;
+    font-size: 42px;
+    opacity: 1 !important;
+    border-radius: 50%;
+}
+
+.checkShowWrapper {
+    border: 1px solid $btnBgColor !important;
+
+}
+
+@media screen and (max-width: 600px) {
+    .todoListContainer {
+        overflow-x: scroll;
+        gap: 21px;
+    }
+
+    .todoTextContainer {
+        gap: 21px !important;
     }
 }

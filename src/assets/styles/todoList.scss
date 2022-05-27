@@ -2,21 +2,54 @@
 @import "mixin";
 
 
-.listContainer{
-    width: 800px;
-    margin-top: 2rem;
+.listContainer {
+    width: 802px;
+    margin-top: 3.1875rem;
     list-style: none;
     display: flex;
     flex-direction: column;
-    border: 1px solid $bgColor;
     background-color: $btnBgColor;
     border-radius: 15px;
-    li:first-child{
+
+    li:first-child {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
     }
-    li:last-child{
+
+    li:last-child {
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
+        border-bottom: 1px solid $todoColor;
+    }
+
+    li {
+        height: 84px;
+    }
+}
+
+.todoTransition-enter {
+    opacity: 0;
+    transition: opacity $transition;
+}
+
+.todoTransition-enter-active {
+    opacity: 1;
+    transition: opacity $transition;
+}
+
+.todoTransition-exit {
+    opacity: 0;
+    transition: opacity $transition;
+}
+
+.todoTransition-exit-active {
+    opacity: 0;
+    transition: opacity $transition;
+
+}
+
+@media screen and (max-width: 860px) {
+    .listContainer {
+        width: 90vw;
     }
 }

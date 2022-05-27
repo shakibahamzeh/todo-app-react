@@ -1,10 +1,10 @@
 .formContainer {
   width: 600px;
   height: 68px;
+  border: 1px solid #F8F8F8;
   -webkit-box-shadow: 0 16px 12px rgba(0, 0, 0, 0.25);
           box-shadow: 0 16px 12px rgba(0, 0, 0, 0.25);
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius: 15px;
 }
 
 .formContainer input {
@@ -14,29 +14,59 @@
   border: none;
   background-color: #F8F8F8;
   padding-left: 37px;
+  font-style: italic;
+  font-size: 1.5rem;
   color: #797979;
   font-size: 24px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 
+.formContainer input::-webkit-input-placeholder {
+  color: #B8B8B8;
+}
+
+.formContainer input:-ms-input-placeholder {
+  color: #B8B8B8;
+}
+
+.formContainer input::-ms-input-placeholder {
+  color: #B8B8B8;
+}
+
+.formContainer input::placeholder {
+  color: #B8B8B8;
+}
+
 .formContainer button {
-  width: 104px;
+  width: 102px;
   height: 100%;
   text-align: center;
   outline: none;
   border: none;
   background-color: #FFFFFF;
-  color: #797979;
+  color: #B8B8B8;
   font-size: 24px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   cursor: pointer;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: color .1s ease-out;
+  transition: color .1s ease-out;
 }
 
 .formContainer button:hover {
-  opacity: 0.8;
+  color: #797979;
+}
+
+@media screen and (max-width: 860px) {
+  .formContainer {
+    width: 90vw;
+  }
+  .formContainer input {
+    width: 80%;
+  }
+  .formContainer button {
+    width: 20%;
+  }
 }
 /*# sourceMappingURL=form.css.map */

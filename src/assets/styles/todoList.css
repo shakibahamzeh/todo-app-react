@@ -1,0 +1,60 @@
+.listContainer {
+  width: 802px;
+  margin-top: 3.1875rem;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+}
+
+.listContainer li:first-child {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.listContainer li:last-child {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom: 1px solid #B8B8B8;
+}
+
+.listContainer li {
+  height: 84px;
+}
+
+.todoTransition-enter {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.todoTransition-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.todoTransition-exit {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.todoTransition-exit-active {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+@media screen and (max-width: 860px) {
+  .listContainer {
+    width: 90vw;
+  }
+}
+/*# sourceMappingURL=todoList.css.map */
