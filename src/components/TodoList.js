@@ -1,6 +1,7 @@
 import React from 'react'
 import Todo from './Todo';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 //style
 import "../assets/styles/todoList.scss";
 

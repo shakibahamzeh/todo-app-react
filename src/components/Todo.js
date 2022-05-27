@@ -5,12 +5,13 @@ import "../assets/styles/todo.scss";
 
 
 const Todo = ({value,todos,todo,setTodos}) => {
-    //remove 
+    
+    //remove todo
     const removeHandler = () => {
         setTodos(todos.filter(element => element.id !== todo.id))
     }
 
-    // checked
+    // checked todo
     const checkedHandler = () => {
         setTodos(todos.map(item => {
            if(item.id === todo.id){

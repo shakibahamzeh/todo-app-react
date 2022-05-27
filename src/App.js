@@ -5,10 +5,11 @@ import TodoList from "./components/TodoList";
 
 
 function App() {
+  //states
   const [value,setValue]=useState("");
   const [todos,setTodos] = useState([]);
 
-
+ //lifecycle
   useEffect(()=>{
     getLocalTodo();
   },[]);
@@ -17,7 +18,7 @@ function App() {
     saveLocalTodo();
   })
 
-  //save
+  //save in localStorage
 
   const saveLocalTodo = () => {
     if(localStorage.getItem('todos') === null){

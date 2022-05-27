@@ -11,10 +11,11 @@ const Form = ({value,setValue,todos,setTodos}) => {
     const submitHandler = (e) => {
         e.preventDefault();
         if(value === ""){
-            alert("Please Enter something")
+            alert("Please Enter something");
         }else{
           setTodos([
-            ...todos, {text:value , completed:false, id:Math.random()*1000}
+            ...todos, 
+            {text:value , completed:false, id:Math.random()*1000}
         ]);
         setValue("");
         }
