@@ -17,7 +17,7 @@
     padding-left: 37px;
     font-style: italic;
     font-size: 1.5rem;
-    @include textStyle($textColor, 24px);
+    @include textStyle($todoColor, 24px);
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 
